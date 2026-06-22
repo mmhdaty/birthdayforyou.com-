@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Happy Birthday, Sayang 🤍</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ SCENE 0: ENVELOPE (opening screen) ============ -->
+<section id="envelope-scene" class="scene active">
+  <div class="velvet-bg dark" id="envelopeBg"></div>
+
+  <!-- big triangular flap that covers the screen, split in half by the seal -->
+  <div class="envelope-flap" id="envelopeFlap">
+    <div class="flap-half flap-left"></div>
+    <div class="flap-half flap-right"></div>
+    <div class="heart-seal" id="heartSeal">
+      <svg viewBox="0 0 100 100" class="heart-seal-svg">
+        <defs>
+          <radialGradient id="heartShine" cx="35%" cy="30%" r="70%">
+            <stop offset="0%" stop-color="#ff8a8a"/>
+            <stop offset="45%" stop-color="#c81f3d"/>
+            <stop offset="100%" stop-color="#6e0f22"/>
+          </radialGradient>
+        </defs>
+        <circle cx="50" cy="50" r="48" fill="#e8d9b0" stroke="#b9893f" stroke-width="1.5"/>
+        <path d="M50 78 C20 58 10 38 22 24 C30 14 46 16 50 30 C54 16 70 14 78 24 C90 38 80 58 50 78 Z" fill="url(#heartShine)" stroke="#7a1124" stroke-width="1"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- the cream card that slides up from behind the flap -->
+  <div class="rising-card" id="risingCard">
+    <p class="eyebrow-date" id="bdayDateIntro">23.06.2026</p>
+    <h1 class="script-title">Happy Birthday<br><span id="nicknameOutIntro">Sayangku tsundere</span></h1>
+    <p class="sub-line" id="ageLineOutIntro">ciee umur dia sekarang udah 16 tahun sekarang</p>
+  </div>
+
+  <p class="tap-hint" id="tapHint">coba pencet</p>
+</section>
+
+<!-- ============ SCENE 1: MAIN CARD STACK ============ -->
+<section id="card-scene" class="scene">
+  <div class="velvet-bg"></div>
+
+  <div class="card-stack" id="cardStack">
+
+    <!-- Slide 1: Happy Birthday -->
+    <article class="card-slide" data-slide="0">
+      <div class="frame">
+        <div class="frame-clip"><div class="ribbon-tab"></div></div>
+        <div class="sparkle sparkle-tl">✦</div>
+        <div class="sparkle sparkle-tr">✦</div>
+
+        <p class="eyebrow-date"><span id="bdayDate">14.02.2026</span></p>
+        <h1 class="script-title">Happy Birthday<br><span id="nicknameOut">Sayang</span></h1>
+        <p class="sub-line" id="ageLineOut">ciee umur dia sekarang udah 16 tahun sekarang</p>
+
+        <div class="bow-divider">🎀</div>
+      </div>
+      <div class="prop prop-cake-left">🍰</div>
+      <div class="prop prop-flowers-right">💐</div>
+    </article>
+
+    <!-- Slide 2: Birthday Boy/Girl photo -->
+    <article class="card-slide" data-slide="1">
+      <div class="frame">
+        <div class="frame-clip"><div class="ribbon-tab"></div></div>
+        <h2 class="script-title small" id="roleTitleOut">Birthday Boy</h2>
+
+        <div class="photo-frame">
+          <div class="photo-frame-inner" id="mainPhoto">
+            <span class="photo-placeholder-text">ganti foto<br>di sini</span>
+          </div>
+        </div>
+
+        <div class="bow-divider">🎀</div>
+      </div>
+      <div class="prop prop-balloons-left">🎈🎈🎈</div>
+      <div class="prop prop-balloons-right">💗💗💗</div>
+    </article>
+
+    <!-- Slide 3: Letter / message -->
+    <article class="card-slide" data-slide="2">
+      <div class="frame frame-letter">
+        <div class="frame-clip"><div class="ribbon-tab"></div></div>
+        <div class="bow-corner bow-left">🎀</div>
+        <div class="bow-corner bow-right">🎀</div>
+
+        <h2 class="script-title small letter-title">Pesan dari aku buat kamu<br>yang akan datang</h2>
+        <div class="letter-body" id="letterBody">
+          <p>happy birthday, sayangku.</p>
+          <p>hari ini hari spesialmu. semoga semua harapan baikmu perlahan menemukan jalannya. makasih sudah jadi pasangan terbaik, makasih untuk semua waktu yang kita lewati bersama. semoga makin dewasa, makin sayang sama keluarga, dan makin sukses di jalan yang kamu pilih.</p>
+          <p>jarak nggak akan pernah mengubah rasa ini. semoga di umur yang baru, langkahmu makin ringan, pikiranmu makin tenang, dan hal-hal baik pelan-pelan menemukanmu.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Slide 4: Blow candle -->
+    <article class="card-slide" data-slide="3">
+      <div class="frame">
+        <div class="frame-clip"><div class="ribbon-tab"></div></div>
+        <h2 class="script-title small">Pejamin mata kamu<br>terus doa</h2>
+
+        <div class="sparkle sparkle-tl">✦</div>
+        <div class="sparkle sparkle-tr">✦</div>
+
+        <div class="cake-wish" id="cakeWish">
+          <div class="cake-candles">
+            <span class="candle"><span class="flame"></span>I</span>
+            <span class="candle"><span class="flame"></span>♥</span>
+            <span class="candle"><span class="flame"></span>U</span>
+          </div>
+          <div class="cake-body">🎂</div>
+        </div>
+        <p class="wish-hint">tahan, dan tiup mic untuk meniup lilin</p>
+
+        <div class="bow-divider">🎀</div>
+      </div>
+      <div class="prop prop-gifts-left">🎁🎁🎁</div>
+      <div class="prop prop-balloons-right">🎈🎈</div>
+    </article>
+
+    <!-- Slide 5: Locket photos -->
+    <article class="card-slide" data-slide="4">
+      <div class="frame">
+        <div class="frame-clip"><div class="ribbon-tab"></div></div>
+
+        <div class="locket" id="locket">
+          <div class="locket-half locket-left">
+            <div class="locket-photo" data-slot="locket1">
+              <span class="photo-placeholder-text small">foto 1</span>
+            </div>
+          </div>
+          <div class="locket-hinge"></div>
+          <div class="locket-half locket-right">
+            <div class="locket-photo" data-slot="locket2">
+              <span class="photo-placeholder-text small">foto 2</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bow-divider">🎀</div>
+      </div>
+      <div class="prop prop-cake-left">🎂</div>
+      <div class="prop prop-envelope-right">💌</div>
+    </article>
+
+    <!-- Slide 6: Song -->
+    <article class="card-slide" data-slide="5">
+      <div class="frame">
+        <div class="frame-clip"><div class="ribbon-tab"></div></div>
+        <h2 class="script-title small">Lagu buat kamu <span class="heart-emoji">❤</span></h2>
+
+        <div class="song-card">
+          <div class="song-art" id="songPhoto">
+            <span class="photo-placeholder-text small">foto</span>
+          </div>
+          <div class="song-info">
+            <p class="song-name" id="songNameOut">Judul Lagu</p>
+            <p class="song-artist" id="songArtistOut">Nama Artis</p>
+            <div class="audio-row">
+              <button id="playBtn" class="play-btn" aria-label="Putar lagu">▶</button>
+              <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+            <audio id="bgAudio" preload="none" loop>
+              <!-- Taruh file mp3 kamu di folder yang sama lalu isi src di bawah, contoh: src="song.mp3" -->
+            </audio>
+          </div>
+        </div>
+
+        <div class="bow-divider">🎀</div>
+      </div>
+    </article>
+
+    <!-- Slide 7: Kiss -->
+    <article class="card-slide" data-slide="6">
+      <div class="frame">
+        <div class="frame-clip"><div class="ribbon-tab"></div></div>
+        <h2 class="script-title small">spesial<br>untukmu</h2>
+
+        <div class="kiss-art">
+<div class="kiss-heart-shape">
+  <span class="lip" style="left:31.6%; top:5.3%; transform: translate(-50%,-50%) rotate(23.8deg) scale(0.99);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:68.2%; top:5.5%; transform: translate(-50%,-50%) rotate(-17.7deg) scale(1.0);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:14.4%; top:16.6%; transform: translate(-50%,-50%) rotate(-22.7deg) scale(0.94);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:20.4%; top:16.7%; transform: translate(-50%,-50%) rotate(10.8deg) scale(0.86);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:34.5%; top:17.6%; transform: translate(-50%,-50%) rotate(8.6deg) scale(1.03);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:39.0%; top:12.3%; transform: translate(-50%,-50%) rotate(1.6deg) scale(0.87);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:48.3%; top:13.6%; transform: translate(-50%,-50%) rotate(-26.3deg) scale(0.99);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:58.8%; top:16.9%; transform: translate(-50%,-50%) rotate(1.1deg) scale(1.04);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:68.2%; top:15.9%; transform: translate(-50%,-50%) rotate(-2.4deg) scale(0.93);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:80.1%; top:17.8%; transform: translate(-50%,-50%) rotate(19.1deg) scale(1.06);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:85.3%; top:13.5%; transform: translate(-50%,-50%) rotate(-11.8deg) scale(0.87);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:15.1%; top:24.4%; transform: translate(-50%,-50%) rotate(19.4deg) scale(0.97);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:25.3%; top:26.9%; transform: translate(-50%,-50%) rotate(-28.0deg) scale(0.91);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:34.1%; top:24.8%; transform: translate(-50%,-50%) rotate(26.9deg) scale(0.97);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:38.5%; top:25.7%; transform: translate(-50%,-50%) rotate(15.6deg) scale(0.93);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:47.7%; top:24.1%; transform: translate(-50%,-50%) rotate(26.0deg) scale(1.08);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:57.0%; top:23.6%; transform: translate(-50%,-50%) rotate(-22.3deg) scale(0.87);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:69.8%; top:23.2%; transform: translate(-50%,-50%) rotate(3.3deg) scale(0.98);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:75.5%; top:26.3%; transform: translate(-50%,-50%) rotate(-20.7deg) scale(1.04);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:84.2%; top:24.6%; transform: translate(-50%,-50%) rotate(-16.1deg) scale(0.93);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:16.3%; top:36.7%; transform: translate(-50%,-50%) rotate(-11.0deg) scale(1.12);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:21.1%; top:34.4%; transform: translate(-50%,-50%) rotate(19.8deg) scale(1.04);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:29.6%; top:37.7%; transform: translate(-50%,-50%) rotate(-16.1deg) scale(0.93);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:42.4%; top:34.0%; transform: translate(-50%,-50%) rotate(-11.4deg) scale(0.87);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:47.7%; top:35.5%; transform: translate(-50%,-50%) rotate(-14.4deg) scale(1.03);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:58.4%; top:34.7%; transform: translate(-50%,-50%) rotate(25.7deg) scale(1.0);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:68.6%; top:37.1%; transform: translate(-50%,-50%) rotate(-17.8deg) scale(0.9);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:79.6%; top:36.8%; transform: translate(-50%,-50%) rotate(-14.0deg) scale(0.91);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:87.7%; top:37.5%; transform: translate(-50%,-50%) rotate(-17.0deg) scale(1.14);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:15.8%; top:45.6%; transform: translate(-50%,-50%) rotate(-4.4deg) scale(0.88);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:20.1%; top:47.6%; transform: translate(-50%,-50%) rotate(-14.6deg) scale(1.06);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:30.5%; top:46.8%; transform: translate(-50%,-50%) rotate(5.4deg) scale(0.94);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:39.1%; top:46.2%; transform: translate(-50%,-50%) rotate(-24.1deg) scale(0.92);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:50.3%; top:47.0%; transform: translate(-50%,-50%) rotate(6.4deg) scale(0.93);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:61.4%; top:43.3%; transform: translate(-50%,-50%) rotate(-27.1deg) scale(0.93);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:67.9%; top:42.5%; transform: translate(-50%,-50%) rotate(-18.1deg) scale(0.96);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:77.7%; top:42.9%; transform: translate(-50%,-50%) rotate(-7.7deg) scale(1.12);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:89.1%; top:45.9%; transform: translate(-50%,-50%) rotate(10.7deg) scale(1.03);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:20.7%; top:52.4%; transform: translate(-50%,-50%) rotate(-27.0deg) scale(1.12);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:32.9%; top:57.6%; transform: translate(-50%,-50%) rotate(-26.8deg) scale(1.04);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:40.8%; top:56.3%; transform: translate(-50%,-50%) rotate(-10.1deg) scale(1.15);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:47.6%; top:55.3%; transform: translate(-50%,-50%) rotate(13.3deg) scale(1.12);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:60.4%; top:56.1%; transform: translate(-50%,-50%) rotate(16.4deg) scale(1.12);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:67.4%; top:56.0%; transform: translate(-50%,-50%) rotate(22.4deg) scale(1.11);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:76.8%; top:56.6%; transform: translate(-50%,-50%) rotate(20.4deg) scale(1.02);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:23.4%; top:64.3%; transform: translate(-50%,-50%) rotate(4.6deg) scale(1.03);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:29.5%; top:65.8%; transform: translate(-50%,-50%) rotate(27.6deg) scale(1.11);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:42.2%; top:64.4%; transform: translate(-50%,-50%) rotate(13.2deg) scale(1.02);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:49.7%; top:66.9%; transform: translate(-50%,-50%) rotate(-23.3deg) scale(1.08);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:56.5%; top:65.6%; transform: translate(-50%,-50%) rotate(-1.1deg) scale(0.92);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:69.3%; top:65.0%; transform: translate(-50%,-50%) rotate(6.4deg) scale(1.13);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:75.9%; top:62.3%; transform: translate(-50%,-50%) rotate(-11.1deg) scale(1.05);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:30.2%; top:73.1%; transform: translate(-50%,-50%) rotate(22.7deg) scale(1.05);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:40.6%; top:77.2%; transform: translate(-50%,-50%) rotate(-9.7deg) scale(1.05);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:48.3%; top:74.6%; transform: translate(-50%,-50%) rotate(17.1deg) scale(1.12);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:61.2%; top:74.4%; transform: translate(-50%,-50%) rotate(4.7deg) scale(0.94);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:66.1%; top:75.0%; transform: translate(-50%,-50%) rotate(18.9deg) scale(1.1);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:42.1%; top:87.5%; transform: translate(-50%,-50%) rotate(-12.5deg) scale(0.9);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:49.7%; top:83.7%; transform: translate(-50%,-50%) rotate(-16.0deg) scale(0.97);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:59.8%; top:85.0%; transform: translate(-50%,-50%) rotate(-10.3deg) scale(1.1);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+  <span class="lip" style="left:52.7%; top:94.7%; transform: translate(-50%,-50%) rotate(-23.8deg) scale(0.86);"><svg viewBox="0 0 24 14" class="lip-svg"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+</div>
+          <span class="kiss kiss-single kiss-1"><svg viewBox="0 0 24 14" class="lip-svg lip-svg-single"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+          <span class="kiss kiss-single kiss-2"><svg viewBox="0 0 24 14" class="lip-svg lip-svg-single"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+          <span class="kiss kiss-single kiss-3"><svg viewBox="0 0 24 14" class="lip-svg lip-svg-single"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+          <span class="kiss kiss-single kiss-4"><svg viewBox="0 0 24 14" class="lip-svg lip-svg-single"><path d="M12 1C9.5 1 8 3 5.5 3C3.5 3 2 2 1 1C1 4 3 7 6 8.5C3.5 9.5 1.5 11.5 1 13C3 12 5.5 11 8 11C9.5 11 10.5 11.7 12 11.7C13.5 11.7 14.5 11 16 11C18.5 11 21 12 23 13C22.5 11.5 20.5 9.5 18 8.5C21 7 23 4 23 1C22 2 20.5 3 18.5 3C16 3 14.5 1 12 1Z"/></svg></span>
+        </div>
+
+        <div class="bow-divider">🎀</div>
+      </div>
+    </article>
+
+    <!-- Slide 8: Closing -->
+    <article class="card-slide" data-slide="7">
+      <div class="frame">
+        <div class="frame-clip"><div class="ribbon-tab"></div></div>
+        <h2 class="script-title">Selamat ulang tahun,<br><span id="nicknameOut2">Sayang</span></h2>
+        <p class="sub-line">Semoga kamu senang 🤍</p>
+        <div class="bow-divider">🎀</div>
+        <button id="restartBtn" class="restart-btn">putar ulang ↺</button>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- Navigation -->
+  <div class="nav-row">
+    <button id="prevBtn" class="nav-btn" aria-label="Sebelumnya">‹</button>
+    <div class="dots" id="dots"></div>
+    <button id="nextBtn" class="nav-btn" aria-label="Berikutnya">›</button>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
